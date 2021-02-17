@@ -30,19 +30,9 @@ class User(db.Model):
         self.email = email
 
 
-@app.route("/")
-def hello_world():
-    return jsonify(hello="world")
-
-
 @app.route("/static/<path:filename>")
 def staticfiles(filename):
     return send_from_directory(app.config["STATIC_FOLDER"], filename)
-
-
-@app.route("/media/<path:filename>")
-def mediafiles(filename):
-    return send_from_directory(app.config["MEDIA_FOLDER"], filename)
 
 
 @app.route("/upload", methods=["GET", "POST"])
@@ -58,3 +48,8 @@ def upload_file():
       <p><input type=file name=file><input type=submit value=Upload>
     </form>
     """
+
+
+@app.route("/")
+def hello_world():
+    return jsonify(hello="world")

@@ -1,5 +1,5 @@
-.env.prod.db
+env.prod.db
 *.swp
 *.swo
-*.swn
 *.swm
+*.swn
