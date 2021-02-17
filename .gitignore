@@ -1,5 +1,6 @@
-env.prod.db
+.env.prod.db
 *.swp
 *.swo
 *.swm
 *.swn
+test
